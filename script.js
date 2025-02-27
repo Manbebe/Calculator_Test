@@ -1,37 +1,32 @@
-let add = document.querySelector(".add").addEventListener("click", function() {
-    console.log("add");});
-let sub = document.querySelector(".sub").addEventListener("click", function() {
-    console.log("sub");});
-let mult = document.querySelector(".mult").addEventListener("click", function() {
-    console.log("mult");});
-let divide = document.querySelector(".divide").addEventListener("click", function() {
-    console.log("divide");});
-let equal = document.querySelector(".equal").addEventListener("click", function() {
-    console.log("equal");});
-let one = document.querySelector(".one").addEventListener("click", function() {
-    console.log("one");});
-let two = document.querySelector(".two").addEventListener("click", function() {
-    console.log("two");});
-let three = document.querySelector(".three").addEventListener("click", function() {
-    console.log("three");});
-let four = document.querySelector(".four").addEventListener("click", function() {
-    console.log("four");});
-let five = document.querySelector(".five").addEventListener("click", function() {
-    console.log("five");});
-let six = document.querySelector(".six").addEventListener("click", function() {
-    console.log("six");});
-let seven = document.querySelector(".seven").addEventListener("click", function() {
-    console.log("seven");});
-let eight = document.querySelector(".eight").addEventListener("click", function() {
-    console.log("eight");});
-let nine = document.querySelector(".nine").addEventListener("click", function() {
-    console.log("nine");});
-let zero = document.querySelector(".zero").addEventListener("click", function() {
-    console.log("zero");});
-let random = document.querySelector(".random").addEventListener("click", function() {
-    console.log("random");});
-let boom = document.querySelector(".boom").addEventListener("click", function() {
-    console.log("KABOOM");});
-let num1 = 5;
-let num2 = 1;
-let result = num1 + num2;
+let currentValue = 0;
+
+let currentOperation = "null";
+
+let display = document.querySelector('.equation')
+const add = document.querySelector(".add").addEventListener("click", () => setOperation('+'), {});
+const sub = document.querySelector(".sub").addEventListener("click", () => setOperation('-'), {});
+const mult = document.querySelector(".mult").addEventListener("click", () => setOperation('*'), {});
+const divide = document.querySelector(".divide").addEventListener("click", () => setOperation('/'), {});
+const equal = document.querySelector(".equal").addEventListener("click", () => setOperation('='), {});
+const one = document.querySelector(".one").addEventListener("click", () => updateValue(1), {});
+const two = document.querySelector(".two").addEventListener("click", () => updateValue(2), {});
+const three = document.querySelector(".three").addEventListener("click", () => updateValue(3), {});
+const four = document.querySelector(".four").addEventListener("click", () => updateValue(4), {});
+const five = document.querySelector(".five").addEventListener("click", () => updateValue(5), {});
+const six = document.querySelector(".six").addEventListener("click", () => updateValue(6), {});
+const seven = document.querySelector(".seven").addEventListener("click", () => updateValue(7), {});
+const eight = document.querySelector(".eight").addEventListener("click", () => updateValue(8), {});
+const nine = document.querySelector(".nine").addEventListener("click", () => updateValue(9), {});
+const zero = document.querySelector(".zero").addEventListener("click", () => updateValue(0), {});
+
+
+
+function updateValue(value) {
+    currentValue = value;
+    display.innerText = currentValue
+};
+
+function setOperation(operation) {
+    currentOperation = operation;
+    console.log("COOLTIME");
+};

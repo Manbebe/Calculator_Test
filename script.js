@@ -34,3 +34,11 @@ function setOperation(operation) {
     display.innerText += operation
 };
 
+function equal() {
+    try {
+        const display = document.querySelector('.equation');
+        display.innerText = eval(display.innerText);
+    } catch (error) {
+        display.innerText = 'Error';
+    }
+}

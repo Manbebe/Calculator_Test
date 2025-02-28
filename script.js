@@ -9,7 +9,7 @@ const add = document.querySelector(".add").addEventListener("click", () => setOp
 const sub = document.querySelector(".sub").addEventListener("click", () => setOperation('-'), {});
 const mult = document.querySelector(".mult").addEventListener("click", () => setOperation('*'), {});
 const divide = document.querySelector(".divide").addEventListener("click", () => setOperation('/'), {});
-const equal = document.querySelector(".equal").addEventListener("click", () => setOperation(" "), {});
+const equalButton = document.querySelector(".equal").addEventListener("click", () => equal(), {});
 const one = document.querySelector(".one").addEventListener("click", () => updateValue(1), {});
 const two = document.querySelector(".two").addEventListener("click", () => updateValue(2), {});
 const three = document.querySelector(".three").addEventListener("click", () => updateValue(3), {});

@@ -1,18 +1,19 @@
 body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
   }
   
-  .container {
+  .calc-container {
     width: 300px;
     height: 425px;
     border: 3px solid black;
     text-align: center;
     gap: 2000px;
     background-color:lightgray;
+    transition: transform 0.5s ease-in-out;
   }
   .equation{
     border: 1px solid black;
@@ -29,3 +30,51 @@ body, html {
     width: 75px;
     margin-bottom:9px;
   }
+
+  @keyframes shake{
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+
+  .shake {
+    animation: shake 0.5s;
+  }
+
+  .shattered {
+    transform: scale(0.1);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    display:none;
+}
+
+body.black-background {
+  background-color: black;
+}
+
+.eyes{
+  display: none;
+  margin: auto;
+}
+
+.eye1{
+  margin-right: 50px;
+
+}
+
+.godishere{
+  display:none;
+}
+
+body.red-text{
+  color: red;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.gods-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

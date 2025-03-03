@@ -6,6 +6,10 @@ let clickCount = 0;
 
 const closeTime = 10000; // 10 seconds
 
+let currentIndex = 0;
+
+const faces = [":-)", ":-(", ">:-(", "8=D", "T_T", "( ͡° ͜ʖ ͡°)", "ヽ༼ຈل͜ຈ༽ﾉ", "ಠ__ಠ"];
+
 const display = document.querySelector('.equation')
 const add = document.querySelector(".add").addEventListener("click", () => setOperation('+'), {});
 const sub = document.querySelector(".sub").addEventListener("click", () => setOperation('-'), {});
@@ -113,3 +117,15 @@ document.addEventListener('DOMContentLoaded', () => {
 function closeTab() {
     window.close();
 }
+
+// Function to flip through the array
+function flipArray() {
+    // Display the current item
+    document.querySelector(".equation").innerText = faces[currentIndex];
+    
+    // Move to the next item, looping back to the start if necessary
+    currentIndex = (currentIndex + 1) % faces.length;
+}
+
+// Add event listener to the button
+document.querySelector(".expressions").addEventListener("click", flipArray);

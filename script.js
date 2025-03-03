@@ -106,7 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 display.innerText += "WHY"
                 container.classList.add('shattered');
                 document.body.classList.add('black-background');
-                document.body.classList.add('red-text')
+                document.body.classList.add('red-text');
+                setTimeout(() => {document.querySelector('.shattered').style.display = 'none';}, 100);
                 setTimeout(() => {document.querySelector('.eyes').style.display = 'block';}, 4000);
                 setTimeout(() => {document.querySelector('.godishere').style.display = 'block';}, 6000);
                 setTimeout(() => {document.querySelector('.godishere').style.display = 'none';}, 8000);

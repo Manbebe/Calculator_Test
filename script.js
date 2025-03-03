@@ -4,7 +4,7 @@ let currentOperation = "null";
 
 let clickCount = 0;
 
-const closeTime = 10000; // 10 seconds
+const closeTime = 13000; // 13 seconds
 
 let currentIndex = 0;
 
@@ -109,6 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.classList.add('red-text')
                 setTimeout(() => {document.querySelector('.eyes').style.display = 'block';}, 4000);
                 setTimeout(() => {document.querySelector('.godishere').style.display = 'block';}, 6000);
+                setTimeout(() => {document.querySelector('.godishere').style.display = 'none';}, 8000);
+                setTimeout(() => {document.querySelector('.heiscoming').style.display = 'block';}, 10000);
                 setTimeout(closeTab, closeTime);
             }});    
 });

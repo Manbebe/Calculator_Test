@@ -4,6 +4,7 @@ body, html {
   align-items: center;
   height: 100vh;
   margin: 0;
+  
   }
   
   .calc-container {
@@ -70,11 +71,15 @@ body.black-background {
 
 body.red-text{
   color: red;
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Creepster', cursive;
 }
 
 .gods-container{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.heiscoming{
+  display:none;
 }
